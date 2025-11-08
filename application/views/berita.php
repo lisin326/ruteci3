@@ -1,11 +1,7 @@
 	<head>
 		<title>Berita</title>
 	</head>
-		<!--menu-->
-
-		<!--Berita-->
 			<h2>Halaman Berita</h2>
-			
 			<?php if (!empty($news)): ?>
 				<ul>
 					<?php foreach($news as $item): ?>

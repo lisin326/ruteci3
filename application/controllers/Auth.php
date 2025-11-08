@@ -19,11 +19,8 @@ class Auth extends CI_Controller {
             $this->session->set_userdata('username', $user->username);  //sesi username = object$user.username
             redirect('apps/home');
         } else {
-            //echo "Login gagal";
-            //$this->session->set_userdata('login_error', 'Username atau password salah');
-            $this->session->set_flashdata('login_error', 'Username atau password salah');
-            //redirect('welcome');
-            redirect('apps/show_login_page');
+            $this->session->set_flashdata('login_error', 'Username atau password salah'); //$this->session->set_userdata('login_error', 'Username atau password salah');
+            redirect('apps/show_login_page');//redirect('apps');
         }
         var_dump($this->Pengguna_model); exit;
     }
@@ -33,5 +30,4 @@ class Auth extends CI_Controller {
         redirect('apps');
     }
 }
-
 ?>

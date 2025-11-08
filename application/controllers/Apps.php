@@ -13,10 +13,8 @@ class Apps extends CI_Controller {
 
 	public function home() {
 		if ($this->session->userdata('username')) {
-			//header
 			$this->load->view('menu');
 			$this->load->view('home');
-			//footer
 			$this->load->view('footer');
 		} else {
 			redirect('apps');
@@ -25,9 +23,7 @@ class Apps extends CI_Controller {
 
 	public function berita() {
 		if ($this->session->userdata('username')) {
-			//header
 			$this->load->view('menu');
-			//data simulasi news
 			$news = [
 				['judul' => 'Pemprograman Semantic', 'tanggal' => '2025-11-07'],
 				['judul' => 'Belajar Web PHP, arsitektur Model-View-Controller(MVC) dengan CI', 'tanggal' => '2025-11-06'],
@@ -38,7 +34,6 @@ class Apps extends CI_Controller {
 			];
 			//$this->load->view('berita');
 			$this->load->view('berita', ['news' => $news]);
-			//footer
 			$this->load->view('footer');
 		} else {
 			redirect('apps');
@@ -46,15 +41,13 @@ class Apps extends CI_Controller {
 	}
 
 	public function show_login_page() {
-        //$error = $this->session->userdata('login_error') ?? null;
-		//$this->session->unset_userdata('login_error');
+        //$error = $this->session->userdata('login_error') ?? null;$this->session->unset_userdata('login_error');
 		$error = $this->session->flashdata('login_error') ?? null;
-        $this->load->view('login', ['error' => $error]); //kirim ke view
+        $this->load->view('login', ['error' => $error]);
     }
 
 	public function dashboard() {
 		$name = $this->session->userdata('username');
 		$this->load->view('dashboard', ['name' =>'$name']);
 	}
-
 }

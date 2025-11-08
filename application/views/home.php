@@ -1,9 +1,6 @@
     <head>
 		<title>Home</title>
 	</head>
-		<!--menu-->
-
-		<!--home-->
 			<h2>Halaman Utama</h2>
 			<p>Anda berhasil terhubung ke database dan berhasil login</p>
 			<p style="text-align:justify;">Contoh aplikasi sederhana Framework Code Igniter 3. Arsitektur MVC serta memahami Session dan Routing. 
