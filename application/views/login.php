@@ -3,6 +3,7 @@
 		<title>CI</title>
 		<style>
 			body{margin:0; display:flex; justify-content:center; align-items:center; height:100vh}
+			<!--body{    margin:0; display:grid;                                              place-items:center}-->
 			form{border:1px solid #ccc; border-radius: 8px; padding: 10px}
 			input, button{margin:5px}
 		</style>
